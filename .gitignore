@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+ckpts/
+models/
+*.mp4
+*.png
+.kaggle/
+.env
