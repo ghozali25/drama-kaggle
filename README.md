@@ -29,7 +29,7 @@ Yang muat di T4:
 ## Alur drama
 
 1. **Naskah dulu.** 1 episode = 6 scene, tiap scene 5 detik.
-   Contoh lengkap: [`prompts/episode-01-balas-dendam.md`](prompts/episode-01-balas-dendam.md).
+   Contoh lengkap: [`prompts/mamang-ai/episode-01-balas-dendam.md`](prompts/mamang-ai/episode-01-balas-dendam.md).
 2. **Kunci karakter.** Bikin 1 foto referensi karakter, lalu semua scene pakai
    **image-to-video** dari foto itu. Jangan text-to-video terus — mukanya ganti-ganti.
 3. **Render per scene di Kaggle**, download sebelum sesi habis.
@@ -68,7 +68,7 @@ Harus muncul 2x Tesla T4.
 
 ### 4. Generate di Gradio
 1. Pilih model **Wan 2.2 TI2V-5B / FastWan**, **480p**, **5 detik**.
-2. Prompt + gambar referensi dari `prompts/episode-01-balas-dendam.md`.
+2. Prompt + gambar referensi dari `prompts/mamang-ai/episode-01-balas-dendam.md`.
 3. Render **1 scene dulu** untuk tes, baru batch 6 scene dalam sesi yang sama.
 4. Download semua hasil dari `/kaggle/working` **sebelum sesi habis (maks 12 jam)**.
 
@@ -79,7 +79,11 @@ Harus muncul 2x Tesla T4.
 ├── README.md
 ├── wan2gp_kaggle.ipynb           # notebook utama — import ke Kaggle
 ├── prompts/
-│   └── episode-01-balas-dendam.md # naskah 6 scene siap copy-paste
+│   ├── mamang-ai/
+│   │   ├── episode-01-balas-dendam.md
+│   │   └── episode-02-pernikahan-palsu.md
+│   │       └── scenes/              # gambar awal scene Ep 02 (.webp)
+│   └── love-is-a-dangerous-game/  # 43 episode, episode-01.md s.d. episode-43.md
 ├── scripts/
 │   └── cek_gpu.py                 # cek GPU + torch
 ├── LICENSE                        # Apache-2.0
